@@ -41,7 +41,7 @@ export default class App extends React.Component {
       <div className='container'>
         <div className="row">
           <span className="col-sm-4"></span>
-          <div className="col-sm-6">
+          <div className="col-sm-6 page-header">
             <h3>Mortgage Calculator</h3>
           </div>
         </div>
