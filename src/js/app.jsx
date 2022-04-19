@@ -18,7 +18,7 @@ export default class App extends React.Component {
   handleChange(e){
     this.setState({
       [e.target.name] : Number(e.target.value)
-   })
+    })
   }
 
   calculate(balance, rate, term){
@@ -30,7 +30,7 @@ export default class App extends React.Component {
     let result = (balance*(numerator/denominator)).toFixed(2)
     this.setState({
       output: `$${result} is your monthly payment`
-   })
+    })
   }
 
   render() {
