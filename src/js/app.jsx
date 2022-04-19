@@ -9,7 +9,10 @@ export default class App extends React.Component {
         rate: 0,
         term: 0,
         output: '',
-    };
+
+      };
+
+    this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange(){
@@ -47,19 +50,19 @@ export default class App extends React.Component {
         <div className='form-group row'>
           <label htmlFor="balance" className="text-right h5 col-sm-4 col-form-label">Loan Balance</label>
           <div className="col-sm-6">
-            <input className="form-control" name='balance' id='balance' type='number' defaultValue={this.state.balance} onChange={() => this.handleChange()}/>
+            <input className="form-control" name='balance' id='balance' type='number' defaultValue={this.state.balance} onChange={this.handleChange}/>
           </div>
         </div>
         <div className='form-group row'>  
           <label htmlFor="rate" className="text-right h5 col-sm-4 col-form-label">Interest Rate (%)</label>
           <div className="col-sm-6">
-            <input className="form-control" name='rate' id='rate' type='number' step='0.01' defaultValue={this.state.rate} onChange={() => this.handleChange()}/>
+            <input className="form-control" name='rate' id='rate' type='number' step='0.01' defaultValue={this.state.rate} onChange={this.handleChange}/>
           </div>
         </div>
         <div className='form-group row'>
           <label htmlFor="term" className="text-right h5 col-sm-4 col-form-label">Loan Term (years)</label>
           <div className="col-sm-6">
-            <select className="form-control" name='term' id ='term' defaultValue={this.state.term} onChange={() => this.handleChange()}>
+            <select className="form-control" name='term' id ='term' defaultValue={this.state.term} onChange={this.handleChange}>
               <option value='15'>15</option>
               <option value='30'>30</option>
             </select>
