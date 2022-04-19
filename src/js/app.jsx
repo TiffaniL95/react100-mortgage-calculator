@@ -15,14 +15,9 @@ export default class App extends React.Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange(){
-    let newBal = Number(document.getElementById('balance').value)
-    let newRate = Number(document.getElementById('rate').value)
-    let newTerm = Number(document.getElementById('term').value)
+  handleChange(e){
     this.setState({
-      balance: newBal,
-      rate: newRate,
-      term: newTerm,
+      [e.target.name] : Number(e.target.value)
    })
   }
 
