@@ -36,7 +36,6 @@ export default class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.output)
     return (
       <div className='container'>
         <div className="row">
