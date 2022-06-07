@@ -58,6 +58,7 @@ export default class App extends React.Component {
           <label htmlFor="term" className="text-right h5 col-sm-4 col-form-label">Loan Term (years)</label>
           <div className="col-sm-6">
             <select className="form-control" name='term' id ='term' defaultValue={this.state.term} onChange={this.handleChange}>
+              <option value='0'>Select Term</option>
               <option value='15'>15</option>
               <option value='30'>30</option>
             </select>
